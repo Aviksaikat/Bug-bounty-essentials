@@ -23,23 +23,36 @@ then
     sudo apt install -y golang
     echo "Setting go...." | lolcat
     mkdir -p "HOME/go"
-    echo 'export PATH="PATH:HOME/go/bin"' >> home/.0rc
+    
+    if [[ $(ps -p $$ | tail -1 | awk '{print $4}') -eq "zsh" ]];
+    then 
+        echo 'export PATH="PATH:HOME/go/bin"' >> $HOME/.zshrc
+    fi
+    
+    if [[ $(ps -p $$ | tail -1 | awk '{print $4}') -eq "bash" ]];
+    then
+        echo 'export PATH="PATH:HOME/go/bin"' >> $HOME/.bashrc
+    else
+        echo "Enter the location of your shell file: "
+        read p
+        echo 'export PATH="PATH:HOME/go/bin"' >> $p 
+    fi
 fi
 
 mkdir installation
 cd installation
 
 #* from repo
-sudo apt-get install -y amass sublist3r subfinder assetfinder altdns dirsearch feroxbuster ffuf gobsuter dirb dirbuster nmap 
 sudo apt-get install -y python3-pip
 sudo apt-get install -y cargo 
-sudo apt-get install -y libpcap-dev\
+sudo apt-get install -y libpcap-dev
+sudo apt-get install -y amass sublist3r subfinder assetfinder altdns dirsearch feroxbuster ffuf gobsuter dirb dirbuster nmap 
 
 #* from pip
 pip3 install arjun
 pip3 install wfuzz
 pip3 install -r requirements.txt --user
-pip install xsrfprobe
+pip3 install xsrfprobe
 sudo pip3 install pycurl bs4 pygeoip gobject cairocffi selenium
 
 
@@ -102,7 +115,6 @@ get_from_git()
     git clone https://github.com/1ndianl33t/Gf-Patterns
     mkdir ~/.gf
     mv Gf-Patterns/*.json ~/.gf
-
 }
 get_from_git
 
