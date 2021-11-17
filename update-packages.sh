@@ -48,7 +48,7 @@ cd installation
 sudo apt-get install -y python3-pip
 sudo apt-get install -y cargo 
 sudo apt-get install -y libpcap-dev
-sudo apt-get install -y amass sublist3r subfinder assetfinder altdns dirsearch feroxbuster ffuf gobuster dirb dirbuster nmap 
+sudo apt-get install -y amass sublist3r subfinder assetfinder altdns dirsearch feroxbuster ffuf gobuster dirb dirbuster nmap nikto burpsuite
 
 #* from pip
 pip3 install arjun

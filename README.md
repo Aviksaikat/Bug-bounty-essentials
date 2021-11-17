@@ -16,5 +16,5 @@ sudo ./update-packages.sh
 
 
 #### TODO:
-- [ ] Add for other debian based distros. Currently tested on kali and parrot
-- [ ] Add support for archbased distros.
+- [ ] Add support for other debian based distros. Currently tested on kali and parrot.
+- [ ] Add support for arch based distros.
