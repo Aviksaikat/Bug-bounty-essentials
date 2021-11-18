@@ -89,6 +89,7 @@ go_mods()
     go install github.com/hakluke/hakrawler@latest
     GO111MODULE=on go get -u -v github.com/bp0lr/gauplus
     go get -u github.com/1ndianl33t/urlprobe
+    go get github.com/mhmdiaa/second-order
 
 }
 go_mods
