@@ -1,6 +1,16 @@
 #!/bin/bash
 #! Bug bounty essential tools install
 
+from_pip()
+{
+    #* from pip
+    pip3 install arjun
+    pip3 install wfuzz
+    pip3 install xsrfprobe
+    pip3 install dnsgen
+}
+from_pip
+
 get_from_git()
 {
     echo "Getting findomain...." | lolcat
@@ -92,5 +102,4 @@ go_mods()
     go get github.com/mhmdiaa/second-order
 
 }
-go_mods
 go_mods

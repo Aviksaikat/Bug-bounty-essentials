@@ -50,12 +50,7 @@ sudo apt-get install -y cargo
 sudo apt-get install -y libpcap-dev
 sudo apt-get install -y amass sublist3r subfinder assetfinder altdns dirsearch feroxbuster ffuf gobuster dirb dirbuster nmap nikto burpsuite
 
-#* from pip
-pip3 install arjun
-pip3 install wfuzz
-pip3 install xsrfprobe
 sudo pip3 install pycurl bs4 pygeoip gobject cairocffi selenium
-
 
 #? rustscan
 # wget https://github.com/RustScan/RustScan/releases/download/2.0.1/rustscan_2.0.1_amd64.deb 
