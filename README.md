@@ -7,7 +7,7 @@
 
 - Usage :
 ```bash
-git https://github.com/Aviksaikat/Bug-bounty-essentials.git
+git clone https://github.com/Aviksaikat/Bug-bounty-essentials.git
 cd Bug-bounty-essentials
 chmod +x *.sh 
 sudo ./update-packages.sh
