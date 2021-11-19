@@ -1,4 +1,4 @@
-# All in one script for Web App Pentesting & Bug Bounty Hunting tools
+# All in one installer script for Web App Pentesting & Bug Bounty Hunting tools
 
 > Saikat Karmakar | Nov : 2021
 
