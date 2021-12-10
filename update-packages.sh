@@ -41,14 +41,12 @@ then
     fi
 fi
 
-mkdir installation
-cd installation
 
 #* from repo
 sudo apt-get install -y python3-pip
 sudo apt-get install -y cargo 
 sudo apt-get install -y libpcap-dev
-sudo apt-get install -y amass sublist3r subfinder assetfinder altdns dirsearch feroxbuster ffuf gobuster dirb dirbuster nmap nikto burpsuite
+sudo apt-get install -y amass sublist3r subfinder assetfinder altdns dirsearch feroxbuster ffuf gobuster dirb dirbuster nmap nikto burpsuite massdns
 
 sudo pip3 install pycurl bs4 pygeoip gobject cairocffi selenium
 
