@@ -1,4 +1,4 @@
-# All in one script for Web App Pentesting & Bug Bounty Hunting tools
+# All in one installer script for Web App Pentesting & Bug Bounty Hunting tools
 
 > Saikat Karmakar | Nov : 2021
 
@@ -7,7 +7,7 @@
 
 - Usage :
 ```bash
-git https://github.com/Aviksaikat/Bug-bounty-essentials.git
+git clone https://github.com/Aviksaikat/Bug-bounty-essentials.git
 cd Bug-bounty-essentials
 chmod +x *.sh 
 sudo ./update-packages.sh

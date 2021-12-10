@@ -8,7 +8,7 @@ fi
 
 if ! command -v lolcat &> /dev/null
 then
-    echo "lolcat could not be found...." 
+    echo "lolcat not found...." 
     echo "Installing lolcat for fun...."
     sudo apt install -y lolcat
 fi
