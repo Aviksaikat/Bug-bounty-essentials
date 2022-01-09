@@ -27,7 +27,7 @@ from_pip()
     pip3 install festin
     # supder handy tool works as http.server but more elegantly
     pip3 install updog
-    pip install truffleHog
+    pip3 install truffleHog
 
 }
 from_pip
@@ -147,6 +147,7 @@ go_mods()
     go env -w GO111MODULE="auto"
     go get -u github.com/Josue87/gotator
     go get github.com/michenriksen/gitrob
-
+    go get github.com/Ice3man543/SubOver
+    GO111MODULE=on go get -u -v github.com/lc/subjs@latest
 }
 go_mods
