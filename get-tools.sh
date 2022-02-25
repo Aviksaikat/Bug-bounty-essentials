@@ -12,13 +12,12 @@ echo " ▄▄▄▄▄                       ▄▄▄▄▄                    
  █    █ █   █  █   █         █    █ █   █  █   █  █   █    █     █▄█            █    █   █  █   █    █     ▀▀▀▄ 
  █▄▄▄▄▀ ▀▄▄▀█  ▀█▄▀█         █▄▄▄▄▀ ▀█▄█▀  ▀▄▄▀█  █   █    ▀▄▄   ▀█             █    ▀█▄█▀  ▀█▄█▀    ▀▄▄  ▀▄▄▄▀ 
                 ▄  █                                             ▄▀                                             
-" | lolcat 
+" | lolcat
 
 mkdir ~/bb-tools
 cd ~/bb-tools
 
-from_pip()
-{
+from_pip() {
     #* from pip
     pip3 install arjun
     pip3 install wfuzz
@@ -32,29 +31,28 @@ from_pip()
 }
 from_pip
 
-#Set the variable inside your shell source 
+#Set the variable inside your shell source
 #COMMON_PORTS_WEB="81,300,591,593,832,981,1010,1311,1099,2082,2095,2096,2480,3000,3128,3333,4243,4567,4711,4712,4993,5000,5104,5108,5280,5281,5601,5800,6543,7000,7001,7396,7474,8000,8001,8008,8014,8042,8060,8069,8080,8081,8083,8088,8090,8091,8095,8118,8123,8172,8181,8222,8243,8280,8281,8333,8337,8443,8500,8834,8880,8888,8983,9000,9001,9043,9060,9080,9090,9091,9200,9443,9502,9800,9981,10000,10250,11371,12443,15672,16080,17778,18091,18092,20720,32000,55440,55672"
 
 cargo install unimap
 
-get_from_git()
-{
+get_from_git() {
     echo "Getting findomain...." | lolcat
-    git clone https://github.com/findomain/findomain.git 
+    git clone https://github.com/findomain/findomain.git
     cd findomain
     #./builder.sh
     cargo build --release
     sudo cp target/release/findomain /usr/bin/
     #findomain
     cd ..
-    
+
     echo "Getting knockpy...." | lolcat
     git clone https://github.com/guelfoweb/knock.git
     cd knock
-    sudo pip3 install -r requirements.txt 
+    sudo pip3 install -r requirements.txt
     sudo python3 setup.py install
     cd ..
-    
+
     echo "Getting scilla...." | lolcat
     git clone https://github.com/edoardottt/scilla.git
     cd scilla
@@ -79,7 +77,7 @@ get_from_git()
     cd GoLinkFinder
     go build GoLinkfinder.go
     cd ..
-    
+
     echo "Getting bucky...." | lolcat
     git clone https://github.com/smaranchand/bucky.git
 
@@ -88,7 +86,7 @@ get_from_git()
     cd SourceWolf/
     pip3 install -r requirements.txt --user
     cd ..
-    
+
     #? in my bb-tools folder
     # echo "Getting Paramspider...." | lolcat
     # git clone https://github.com/devanshbatham/ParamSpider
@@ -104,9 +102,7 @@ get_from_git()
 }
 get_from_git
 
-
-go_mods()
-{
+go_mods() {
     echo "Installing go modules...." | lolcat
     go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
     go get -v github.com/projectdiscovery/dnsx/cmd/dnsx
@@ -142,12 +138,18 @@ go_mods()
     GO111MODULE=on go get -v github.com/projectdiscovery/shuffledns/cmd/shuffledns
     go get -u github.com/gwen001/github-subdomains
     go get github.com/cgboal/sonarsearch/cmd/crobat
-    GO111MODULE=on go get github.com/d3mondev/puredns/v2
+    #GO111MODULE=on go get github.com/d3mondev/puredns/v2
     go get -u github.com/glebarez/cero
     go env -w GO111MODULE="auto"
     go get -u github.com/Josue87/gotator
     go get github.com/michenriksen/gitrob
     go get github.com/Ice3man543/SubOver
     GO111MODULE=on go get -u -v github.com/lc/subjs@latest
+    go get -u -v github.com/magisterquis/s3finder
+    GO111MODULE=on go install github.com/d3mondev/puredns/v2@latest
+    GO111MODULE=on go install -v github.com/Hackmanit/Web-Cache-Vulnerability-Scanner@latest
+    #go get -u -v github.com/lukasikic/subzy
+    go install -v github.com/lukasikic/subzy@latest
+    GO111MODULE=on go get -v github.com/projectdiscovery/mapcidr/cmd/mapcidr
 }
 go_mods
