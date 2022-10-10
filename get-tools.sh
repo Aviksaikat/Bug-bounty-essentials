@@ -97,59 +97,63 @@ get_from_git() {
     # cd ..
 
     git clone https://github.com/1ndianl33t/Gf-Patterns
+    https://github.com/Aviksaikat/gf-templates.git
     mkdir ~/.gf
     mv Gf-Patterns/*.json ~/.gf
+    mv gf-templates/templates/*.json ~/.gf
 }
 get_from_git
 
 go_mods() {
     echo "Installing go modules...." | lolcat
-    go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
-    go get -v github.com/projectdiscovery/dnsx/cmd/dnsx
-    go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
-    go get -u github.com/c-sto/recursebuster
-    GO111MODULE=on go get -u github.com/jaeles-project/gospider
+    go install github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
+    go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest
+    go install github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
+    go install github.com/c-sto/recursebuster@latest
+    go install github.com/jaeles-project/gospider@latest
     go install github.com/hakluke/hakrawler@latest
     go install github.com/lc/gau/v2/cmd/gau@latest
-    go get -u github.com/iamstoxe/urlgrab
-    go get -u github.com/003random/getJS
-    go get -u github.com/ameenmaali/qsfuzz
-    GO111MODULE=on go get -v github.com/dwisiswant0/crlfuzz/cmd/crlfuzz
+    go install github.com/iamstoxe/urlgrab@latest
+    go install github.com/003random/getJS@latest
+    go install github.com/ameenmaali/qsfuzz@latest
+    go install github.com/dwisiswant0/crlfuzz/cmd/crlfuzz@latest
     go install github.com/hahwul/dalfox/v2@latest
-    go get -u github.com/haccer/subjack
-    go get -u github.com/Ice3man543/SubOver
-    go get -u github.com/tomnomnom/anew
-    go get -u github.com/tomnomnom/meg
-    go get -u github.com/tomnomnom/waybackurls
-    go get -u github.com/tomnomnom/qsreplace
-    go get -u github.com/tomnomnom/gf
-    go get -u github.com/tomnomnom/httprobe
-    go get -u github.com/tomnomnom/concurl
-    go get -u github.com/tomnomnom/burl
-    go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
-    go install github.com/hakluke/hakrawler@latest
-    GO111MODULE=on go get -u -v github.com/bp0lr/gauplus
-    go get -u github.com/1ndianl33t/urlprobe
-    go get github.com/mhmdiaa/second-order
-    go get -u github.com/lc/cspparse
-    go get -u github.com/shenwei356/rush/
-    GO111MODULE=on go get -u -v github.com/lc/subjs
-    go get -u github.com/dwisiswant0/cf-check
-    GO111MODULE=on go get -v github.com/projectdiscovery/shuffledns/cmd/shuffledns
-    go get -u github.com/gwen001/github-subdomains
-    go get github.com/cgboal/sonarsearch/cmd/crobat
-    #GO111MODULE=on go get github.com/d3mondev/puredns/v2
-    go get -u github.com/glebarez/cero
-    go env -w GO111MODULE="auto"
-    go get -u github.com/Josue87/gotator
-    go get github.com/michenriksen/gitrob
-    go get github.com/Ice3man543/SubOver
-    GO111MODULE=on go get -u -v github.com/lc/subjs@latest
-    go get -u -v github.com/magisterquis/s3finder
-    GO111MODULE=on go install github.com/d3mondev/puredns/v2@latest
-    GO111MODULE=on go install -v github.com/Hackmanit/Web-Cache-Vulnerability-Scanner@latest
-    #go get -u -v github.com/lukasikic/subzy
-    go install -v github.com/lukasikic/subzy@latest
-    GO111MODULE=on go get -v github.com/projectdiscovery/mapcidr/cmd/mapcidr
+    go install github.com/haccer/subjack@latest
+    go install github.com/Ice3man543/SubOver@latest
+    go install github.com/tomnomnom/anew@latest
+    go install github.com/tomnomnom/meg@latest
+    go install github.com/tomnomnom/waybackurls@latest
+    go install github.com/tomnomnom/qsreplace@latest
+    go install github.com/tomnomnom/gf@latest
+    go install github.com/tomnomnom/httprobe@latest
+    go install github.com/tomnomnom/concurl@latest
+    go install github.com/tomnomnom/burl@latest
+    go install github.com/projectdiscovery/httpx/cmd/httpx@latest
+    go install github.com/bp0lr/gauplus@latest
+    go install github.com/1ndianl33t/urlprobe@latest
+    go install github.com/mhmdiaa/second-order@latest
+    go install github.com/lc/cspparse@latest
+    go install github.com/shenwei356/rush/
+    go install github.com/lc/subjs@latest
+    go install github.com/dwisiswant0/cf-check@latest
+    go install github.com/projectdiscovery/shuffledns/cmd/shuffledns@latest
+    go install github.com/gwen001/github-subdomains@latest
+    go install github.com/cgboal/sonarsearch/cmd/crobat@latest
+    #go get github.com/d3mondev/puredns/v2
+    go install github.com/glebarez/cero@latest
+    #go env -w GO111MODULE="auto"
+    go install github.com/Josue87/gotator@latest
+    go install github.com/michenriksen/gitrob@latest
+    go install github.com/Ice3man543/SubOver@latest
+    go install github.com/lc/subjs@latest
+    go install github.com/magisterquis/s3finder@latest
+    go install github.com/d3mondev/puredns/v2@latest
+    go install github.com/Hackmanit/Web-Cache-Vulnerability-Scanner@latest
+    #go install -v github.com/lukasikic/subzy
+    go install github.com/lukasikic/subzy@latest
+    go install github.com/projectdiscovery/mapcidr/cmd/mapcidr@latest
+    go install github.com/detectify/page-fetch@latest
+    go install github.com/ferreiraklet/airixss@latest
+    go install github.com/s0md3v/smap/cmd/smap@latest
 }
 go_mods
