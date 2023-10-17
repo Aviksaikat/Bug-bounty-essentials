@@ -24,20 +24,20 @@ then
     echo "Setting go...." | lolcat
     mkdir -p "$HOME/go"
     
-    if [[ $(ps -p $$ | tail -1 | awk '{print $4}') -eq "zsh" ]];
+    if [[ $(ps -p $$ | tail -1 | awk "{print $4}") -eq "zsh" ]];
     then 
-        echo 'export GOPATH=$HOME/go' >> $HOME/.zshrc
-        echo 'export PATH="$PATH:$GOPATH/bin"' >> $HOME/.zshrc
+        echo "export GOPATH=$HOME/go" >> $HOME/.zshrc
+        echo "export PATH="$PATH:$GOPATH/bin"" >> $HOME/.zshrc
     fi
     
-    if [[ $(ps -p $$ | tail -1 | awk '{print $4}') -eq "bash" ]];
+    if [[ $(ps -p $$ | tail -1 | awk "{print $4}") -eq "bash" ]];
     then
-        echo 'export GOPATH=$HOME/go' >> $HOME/.bashrc
-        echo 'export PATH="$PATH:$GOPATH/bin"' >> $HOME/.bashrc
+        echo "export GOPATH=$HOME/go" >> $HOME/.bashrc
+        echo "export PATH="$PATH:$GOPATH/bin"" >> $HOME/.bashrc
     else
         echo "Enter the location of your shell file: "
         read p
-        echo 'export PATH="$PATH:$HOME/go/bin"' >> $p 
+        echo "export PATH="$PATH:$HOME/go/bin"" >> $p
     fi
 fi
 
